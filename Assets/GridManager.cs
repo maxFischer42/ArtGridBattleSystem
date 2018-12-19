@@ -32,6 +32,7 @@ public class GridManager : MonoBehaviour {
     {
         SetDefaults();
         gridStart.InstantiateGrid(startPoint, gridSize, gridBox);
+        gridNav.Setup(grid, originPoint);
     }
 
     public void SetDefaults()

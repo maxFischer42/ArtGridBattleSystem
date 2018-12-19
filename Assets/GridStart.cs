@@ -9,7 +9,7 @@ public class GridStart : MonoBehaviour
     {
         float x = _startPosition.x;
         float y = _startPosition.y;
-        for (int a = Mathf.RoundToInt(y); a < _size.y; a++)
+        for (int a = Mathf.RoundToInt(y); a < _size.y; a++) 
         {
             for (int i = Mathf.RoundToInt(x); i < _size.x; i++)
             {
@@ -17,12 +17,13 @@ public class GridStart : MonoBehaviour
                 Debug.Log("Added box at ( " + i + " , " + a + " )");
             }
         }
-        GetComponent<GridNavigation>().Setup(GetComponent<GridManager>().grid, GetComponent<GridManager>().originPoint);
     }
 
     public void PlaceBox(Vector2 _position, GridBox _box)
     {
         GameObject _object = new GameObject();
+        _object.AddComponent<Grid>();
+        _object.GetComponent<Grid>().currentPosition = _position;
         _object.AddComponent<SpriteRenderer>();
         _object.GetComponent<SpriteRenderer>().sprite = _box.boxImage;
         _object.GetComponent<SpriteRenderer>().color = _box.gridColor;

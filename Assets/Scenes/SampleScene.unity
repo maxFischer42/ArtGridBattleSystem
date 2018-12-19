@@ -121,6 +121,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 99226040}
+  - component: {fileID: 99226041}
+  - component: {fileID: 99226042}
+  - component: {fileID: 99226043}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -135,12 +138,51 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 99226039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24060869, y: 0.9993902, z: -9.880859}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &99226041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 99226039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f312e04035e07874c874f1b982d344bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridBox: {fileID: 11400000, guid: 4723572dda7281e45a7039e2f6bb5ea4, type: 2}
+  playerBox: {fileID: 11400000, guid: 74fc2edbb4e4bed4585db9761d9a0f58, type: 2}
+  startPoint: {x: 0, y: 0}
+  originPoint: {x: 0, y: 0}
+  gridSize: {x: 10, y: 5}
+  grid: []
+--- !u!114 &99226042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 99226039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f750d866b6577d344b1b15aa578e3f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &99226043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 99226039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282bf6d48e5dcfc4c97a90c98d039b9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0

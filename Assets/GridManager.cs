@@ -4,7 +4,6 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(GridStart))]
-[RequireComponent(typeof(GridNavigation))]
 public class GridManager : MonoBehaviour {
 
     [Tooltip("The GridBox item that will make up the grid")]
@@ -17,7 +16,7 @@ public class GridManager : MonoBehaviour {
     public Vector2 startPoint;
 
     private GridStart gridStart;
-    private GridNavigation gridNav;
+    public GameObject gridPlayer;
 
     [Tooltip("The location the player's cursor starts at on the grid.")]
     public Vector2 originPoint;
@@ -27,18 +26,15 @@ public class GridManager : MonoBehaviour {
     public List<GameObject> grid = new List<GameObject>();
 
 
-
     public void Start()
     {
         SetDefaults();
         gridStart.InstantiateGrid(startPoint, gridSize, gridBox);
-        gridNav.Setup(grid, originPoint);
     }
 
     public void SetDefaults()
     {
         gridStart = GetComponent<GridStart>();
-        gridNav = GetComponent<GridNavigation>();
     }
 
 }

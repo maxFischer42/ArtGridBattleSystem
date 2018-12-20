@@ -28,7 +28,10 @@ public class GridStart : MonoBehaviour
         _object.GetComponent<SpriteRenderer>().sprite = _box.boxImage;
         _object.GetComponent<SpriteRenderer>().color = _box.gridColor;
         _object.GetComponent<Transform>().localScale = _box.gridSize;
-        GameObject _newBox = (GameObject)Instantiate(_object, _position, Quaternion.identity);
+        GameObject _newBox = (GameObject)Instantiate(_object, transform);
+        _newBox.name = "( " + _position.x + " , " + _position.y + " )";
+        _newBox.transform.SetPositionAndRotation(_position, Quaternion.identity);
+        Destroy(_object);
         GetComponent<GridManager>().grid.Add(_newBox);
     }
 	

@@ -14,7 +14,8 @@ public class PlayerAnimator : MonoBehaviour {
 
     public void Update()
     {
-
+        if (Time.timeScale == 0)
+            return;
 
 
         RuntimeAnimatorController animation = Idle;

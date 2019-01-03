@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerBattle : MonoBehaviour {
 
     public GameObject lightHeal;
+    public GameObject swordBash;
 
     public void UseArt(string artName)
     {
@@ -12,6 +13,9 @@ public class PlayerBattle : MonoBehaviour {
         {
             case "Light Heal":
                 LightHeal();
+                break;
+            case "Sword Bash":
+                SwordBash();
                 break;
         }
     }
@@ -21,5 +25,9 @@ public class PlayerBattle : MonoBehaviour {
         Instantiate(lightHeal);
     }
 
+    public void SwordBash()
+    {
+        Instantiate(swordBash);
+    }
 
 }

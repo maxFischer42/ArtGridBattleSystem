@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Sprite
-  m_Shader: {fileID: 4800000, guid: 763415e80b2a95b45954abc9ab3d49f2, type: 3}
+  m_Shader: {fileID: 4800000, guid: 8164db465aa7ef245b03bee9c4b63a06, type: 3}
   m_ShaderKeywords: CURVATURE_ON DOUBLESIDED_ON ETC1_EXTERNAL_ALPHA HSB_TINT_ON PIXELSNAP_ON
-    REFLECTION_ON _ALPHABLEND_ON _ALPHA_CLIP _FIXED_NORMALS_VIEWSPACE
+    REFLECTION_ON _ALPHABLEND_ON _ALPHA_CLIP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -150,14 +150,14 @@ Material:
     - _Cull: 0
     - _CurvatureDepth: 0.5
     - _CustomRenderQueue: 0
-    - _Cutoff: 0.99
+    - _Cutoff: 0.001
     - _DetailNormalMapScale: 1
-    - _Dissolve: 0
+    - _Dissolve: -0.5
     - _DissolveBlend: 0
     - _DissolveBorderWidth: 0
-    - _DissolveEdgePower: 0.1
+    - _DissolveEdgePower: 16
     - _DissolveGlowStrength: 0
-    - _DissolveNoiseScale: 1
+    - _DissolveNoiseScale: 10
     - _DstBlend: 10
     - _EmissionBlendAnimation1: 0
     - _EmissionBlendAnimation2: 0
@@ -216,7 +216,7 @@ Material:
     - _ReflectionStrength: 0
     - _RefractionStrength: 0.5
     - _RenderQueue: 0
-    - _RimPower: 2
+    - _RimPower: 25.62
     - _Saturation: 1
     - _ShadowAlphaCutoff: 1
     - _SmoothnessTextureChannel: 0
@@ -229,14 +229,14 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DissolveEdgeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DissolveEdgeColor: {r: 1, g: 1, b: 1, a: 0}
     - _DissolveGlowColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveNoiseSpeed: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
     - _EmissionTint: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionTint2: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionTint3: {r: 1, g: 1, b: 1, a: 1}
-    - _FixedNormal: {r: 0, g: 0, b: 1, a: 1}
+    - _FixedNormal: {r: 0, g: 0, b: -1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _HSBC: {r: 0, g: 0.5, b: 0.5, a: 0.5}
     - _Layer1Color: {r: 1, g: 1, b: 1, a: 1}

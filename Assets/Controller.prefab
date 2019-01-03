@@ -1050,6 +1050,7 @@ MonoBehaviour:
   sideWalk: {fileID: 9100000, guid: 45d3e445341c59c4a9866d7ec437671f, type: 2}
   downWalk: {fileID: 9100000, guid: 2c45bfc744817ab4ba8f77c051c167aa, type: 2}
   upWalk: {fileID: 9100000, guid: 08f520decea2b0047a7864947996681e, type: 2}
+  usingArt: 0
 --- !u!114 &114894987123779674
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1173,7 +1174,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e2337db943403ff438817243a4e29456, type: 2}
+  - {fileID: 2100000, guid: 35366d112d0968947a5d0f14b061ebd9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -12,9 +12,13 @@ public class PlayerAnimator : MonoBehaviour {
     public RuntimeAnimatorController downWalk;
     public RuntimeAnimatorController upWalk;
 
+    public bool usingArt = false;
+
     public void Update()
     {
         if (Time.timeScale == 0)
+            return;
+        if (usingArt)
             return;
 
 

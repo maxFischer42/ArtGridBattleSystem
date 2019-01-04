@@ -36,9 +36,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4651637923419906}
-  - component: {fileID: 114119597429655048}
+  - component: {fileID: 114782561926560900}
   m_Layer: 0
-  m_Name: Sword Bash Object
+  m_Name: Shadow Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ Transform:
   m_Father: {fileID: 4651637923419906}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &114119597429655048
+--- !u!114 &114782561926560900
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,19 +79,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1571544788176096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac27f967aff8bdd44b7ab07133d073f0, type: 3}
+  m_Script: {fileID: 11500000, guid: c0f168cb1dcbe094aad73dbe525fd990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limits: {x: 1, y: 50}
-  ArtVariant: 0
-  animationTime: 1
+  limits: {x: 1, y: 1}
+  ArtVariant: 2
+  animationTime: 3
   timer: 0
   anim: {fileID: 0}
-  m_animation: {fileID: 9100000, guid: 64d706b4bd4aea943b0d75ab8f9784b0, type: 2}
-  timeToHitbox: 0.5
-  HitBox: {fileID: 1114282427658968, guid: 08d89c090e040ce48a2e17434e3925e7, type: 2}
-  effect: {fileID: 1209822000008030, guid: 6a4382a410a3af74fb803955bdb2470c, type: 2}
-  percentHP: 15
+  healSprite: {fileID: 21300000, guid: 1a12c47b3e03f0443aad8262db949fdc, type: 3}
+  effect: {fileID: 1209822000008030, guid: 0ba662636130f8b4886721c1d26860e0, type: 2}
+  percentBuff: 25
 --- !u!198 &198227165576569978
 ParticleSystem:
   m_ObjectHideFlags: 1

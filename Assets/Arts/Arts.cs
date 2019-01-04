@@ -22,7 +22,7 @@ public class Arts : MonoBehaviour {
         control = GameObject.FindObjectOfType<PlayerController>().GetComponent<PlayerController>();
         animator = GameObject.FindObjectOfType<PlayerAnimator>().GetComponent<PlayerAnimator>();
         anim = GameObject.FindObjectOfType<PlayerAnimator>().GetComponent<Animator>();
-
+        GameObject.FindObjectOfType<PlayerBattle>().GetComponent<PlayerBattle>().CanUse = false;
         motor.enabled = false;
         control.enabled = false;
         animator.enabled = false;
@@ -34,7 +34,7 @@ public class Arts : MonoBehaviour {
         if(timer >= animationTime)
         {
 
-
+            GameObject.FindObjectOfType<PlayerBattle>().GetComponent<PlayerBattle>().CanUse = true;
             motor.enabled = true;
             control.enabled = true;
             animator.enabled = true;

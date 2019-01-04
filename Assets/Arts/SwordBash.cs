@@ -10,6 +10,7 @@ public class SwordBash : Arts {
     private bool hasAttacked;
     public GameObject HitBox;
     public GameObject effect;
+    public float percentHP = 5f;
 
 
     void Awake ()
@@ -27,8 +28,10 @@ public class SwordBash : Arts {
         if(timer >= timeToHitbox && !hasAttacked)
         {
             hasAttacked = true;
+            HitBox.GetComponent<DamageCollider>().damage = percentHP;
             GameObject hitBoxSpawned = (GameObject)Instantiate(HitBox,GameObject.Find("Controller").transform);
-            Destroy(hitBoxSpawned, 0.016f);
+            //Destroy(hitBoxSpawned, 0.016f);
+            
         }
 
 	}

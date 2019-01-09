@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -1217,6 +1217,7 @@ GameObject:
   - component: {fileID: 367809437}
   - component: {fileID: 367809436}
   - component: {fileID: 367809433}
+  - component: {fileID: 367809439}
   - component: {fileID: 367809438}
   m_Layer: 8
   m_Name: Knight
@@ -1322,6 +1323,29 @@ MonoBehaviour:
   healthBar: {fileID: 299731355}
   maxHP: 0
   currentHP: 0
+--- !u!114 &367809439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367809432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271f6d48efb0c0c4a967bdb1adab6e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enMov: {fileID: 0}
+  arts:
+  - {fileID: 11400000, guid: b95fea8c3c1b0294b8256eb4b8133bff, type: 2}
+  warningText: {fileID: 1021038437}
+  animations:
+  - {fileID: 9100000, guid: 69df44b55409f0349bd06e5500ceaf02, type: 2}
+  idle: {fileID: 9100000, guid: dd31fa7831502274e998b8fadd1db407, type: 2}
+  animator: {fileID: 786623398}
+  cooldowns: []
+  currentCooldown: []
+  disable: 
+  distanceToAttack: {x: 1, y: 0, z: 1}
 --- !u!1 &368512558
 GameObject:
   m_ObjectHideFlags: 0

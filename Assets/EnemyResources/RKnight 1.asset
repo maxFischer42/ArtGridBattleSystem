@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08bcc89f96fd9154fb365f1c172331ed, type: 3}
-  m_Name: RKnight
+  m_Name: RKnight 1
   m_EditorClassIdentifier: 
-  HP: 25
-  Name: Knight
-  level: 20
-  atk: 5
-  def: 2
+  HP: 50
+  Name: Paladin
+  level: 25
+  atk: 8
+  def: 4

@@ -59,7 +59,13 @@ public class Battle : MonoBehaviour {
     }
 
 
-
+    private void OnDestroy()
+    {
+        Bounds(false);
+        inBattle = false;
+        GameObject.Find("OverworldMenu").GetComponent<Canvas>().enabled = true;
+        GameObject.Find("BattleMenu").GetComponent<Canvas>().enabled = false;
+    }
 
     //sets or unsets the fighting bounds for the battle
     void Bounds(bool state)

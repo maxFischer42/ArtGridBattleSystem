@@ -14,6 +14,7 @@ public class EnemyArts : MonoBehaviour {
     public Animator animator;
     public float[] cooldowns, currentCooldown;
     public bool[] disable;
+    public bool attacking;
 
 	// Use this for initialization
 	void Start ()
@@ -44,20 +45,30 @@ public class EnemyArts : MonoBehaviour {
                     disable[i] = false;
                     break;
                 }
-                currentCooldown[i]++;
+                currentCooldown[i]+=Time.deltaTime;
             }
         }
 	}
 
     public IEnumerator UseArt(int _ID, RuntimeAnimatorController _animation)
     {
+        attacking = true;
+        enMov.enabled = false;
+        GameObject warning = (GameObject)Instantiate(arts[_ID].warning, transform);
+        Destroy(warning, arts[_ID].warningTime);
+        Debug.Log("Attack Begin");
         warningText.text = arts[_ID].name;
         yield return new WaitForSeconds(arts[_ID].warningTime);
+        Debug.Log("Change Animation");
         animator.runtimeAnimatorController = _animation;
         arts[_ID].UseArt(transform);
+        Debug.Log("Use Art");
         yield return new WaitForSeconds(arts[_ID].animationTime);
+        Debug.Log("End Art");
         animator.runtimeAnimatorController = idle;
         warningText.text = "No Current Action";
+        enMov.enabled = true;
+        attacking = false;
     }
 
 

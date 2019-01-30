@@ -366,7 +366,7 @@ TextureImporter:
         serializedVersion: 2
         x: 2973
         y: 73
-        width: 209
+        width: 293
         height: 159
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -376,26 +376,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c9eebf636edd92847a4c299040fe04ca
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack1_13
-      rect:
-        serializedVersion: 2
-        x: 3183
-        y: 162
-        width: 79
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91961d7847f251d41835b28f82c88cd8
       vertices: []
       indices: 
       edges: []

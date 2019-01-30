@@ -12,7 +12,8 @@ public class Bob : MonoBehaviour {
     public float var = 1;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         origin = transform.position;
 	}
 	

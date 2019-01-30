@@ -20,6 +20,8 @@ public class EnemyHP : MonoBehaviour {
     public void FixedUpdate()
     {
         healthBar.size = currentHP / maxHP;
+        if (currentHP <= 0)
+            Destroy(gameObject);
     }
 
 }

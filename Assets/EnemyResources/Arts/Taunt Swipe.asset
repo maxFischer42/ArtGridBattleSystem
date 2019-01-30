@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 415d79dd4d2e58f41a86012ead728470, type: 3}
-  m_Name: Spear Break
+  m_Name: Taunt Swipe
   m_EditorClassIdentifier: 
-  artName: Spear Break
-  cooldown: 12
+  artName: Taunt Swipe
+  cooldown: 25
   m_artType: 0
-  hitBox: {fileID: 1357257541694302, guid: cac414f89632fcf41821269f57bb798c, type: 2}
-  warning: {fileID: 1004171907653848, guid: 2fefdc2d526e0334fb45358be9d42715, type: 2}
-  value: 5
-  warningTime: 4
-  animationTime: 2
+  hitBox: {fileID: 1357257541694302, guid: c8a44785d57fd3a4f9ef1c176302da96, type: 2}
+  warning: {fileID: 1355053259701366, guid: b4cea6cb71b573e4785013e591a183f5, type: 2}
+  value: 0
+  warningTime: 6
+  animationTime: 1

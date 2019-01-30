@@ -10,6 +10,7 @@ public class EArt : ScriptableObject {
     public enum artType {Offensive, Defensive, Support };
     public artType m_artType;
     public GameObject hitBox;
+    public GameObject warning;
     public int value;
     public float warningTime;
     public float animationTime;
@@ -18,6 +19,6 @@ public class EArt : ScriptableObject {
     public void UseArt(Transform user)
     {
         GameObject hB = (GameObject)Instantiate(hitBox,user);
-        Destroy(hB, 0.016f);
+        Destroy(hB, 1f);
     }
 }

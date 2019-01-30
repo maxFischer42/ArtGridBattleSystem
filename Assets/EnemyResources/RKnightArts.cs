@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class RKnightArts : EnemyArts {
 
-    public Vector3 distanceToAttack;
+    public float distanceToAttack;
+
 	
 	// Update is called once per frame
 	void FixedUpdate ()
     {
-        if(PlayerInRange())
+        if (PlayerInRange() && !attacking)
         {
-            SpearBreak();
+            int rand = Random.Range(0, arts.Length);
+            Atk(rand);
+            
         }
 	}
 
@@ -19,30 +22,30 @@ public class RKnightArts : EnemyArts {
     {
         bool value = false;
         Vector3 playerPos = GameObject.Find("Controller").transform.position;
-        Vector3 myPos = transform.position;
-        Vector3 distance = myPos - playerPos;
-        distance.Normalize();
-        distance = distance.normalized;
-        Debug.Log(distance);
-        if(Mathf.Abs(distance.x) <= distanceToAttack.x && Mathf.Abs(distance.z) <= distanceToAttack.z)
+        RaycastHit hit;
+        Vector3 direction = playerPos - transform.GetChild(0).transform.position;
+        direction.Normalize();
+        //GetComponent<LineRenderer>().SetPosition(0, transform.GetChild(0).transform.position);
+        //GetComponent<LineRenderer>().SetPosition(1, transform.GetChild(0).transform.position + (direction * distanceToAttack));
+        if (Physics.Raycast(transform.position, direction, out hit, distanceToAttack))
         {
-            Debug.Log("Close to player");
-            value = true;
-        }
-        else
-        {
-            Debug.Log("Too far from player");
+            
+            if (hit.collider.gameObject.name == "Controller")
+            {
+                value = true;
+            }
         }
         return value;
     }
 
 
-    void SpearBreak()
+    void Atk(int var)
     {
-        if(!disable[0])
+        if(!disable[var])
         {
-            Debug.Log("Spear Break!");
-            UseArt(0,animations[0]);
+            disable[var] = true;
+            StartCoroutine(UseArt(var,animations[var]));
+            Debug.Log("Attack!");
         }
     }
 }
